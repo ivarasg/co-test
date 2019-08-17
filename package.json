@@ -2,10 +2,10 @@
   "name": "co-test",
   "version": "1.0.0",
   "description": "compara online test",
-  "main": "index.js",
   "scripts": {
     "test": "jest",
-    "clean": "rm -rf coverage"
+    "clean": "rm -rf coverage",
+    "after-30-days": "node after-30-days.js"
   },
   "jest": {
     "collectCoverage": true,
