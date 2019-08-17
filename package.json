@@ -4,7 +4,13 @@
   "description": "compara online test",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "clean": "rm -rf coverage"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": ["src/*.js"],
+    "coverageReporters": ["lcov", "text"]
   },
   "repository": {
     "type": "git",
