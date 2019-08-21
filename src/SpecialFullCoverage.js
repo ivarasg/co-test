@@ -17,11 +17,6 @@ class SpecialFullCoverage extends FullCoverage {
     super(n, s, p)
   }
 
-  updatePrice() {
-    this.adjustSellIn()
-    this.adjustPrice()
-  }
-
   adjustPrice() {
     let increment, adjustedPrice
 

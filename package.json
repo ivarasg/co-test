@@ -9,8 +9,13 @@
   },
   "jest": {
     "collectCoverage": true,
-    "collectCoverageFrom": ["src/*.js"],
-    "coverageReporters": ["lcov", "text"]
+    "collectCoverageFrom": [
+      "src/*.js"
+    ],
+    "coverageReporters": [
+      "lcov",
+      "text"
+    ]
   },
   "repository": {
     "type": "git",
