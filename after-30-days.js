@@ -4,8 +4,15 @@ const SpecialFullCoverage = require('./src/SpecialFullCoverage')
 const MegaCoverage = require('./src/MegaCoverage')
 const SuperSale = require('./src/SuperSale')
 
+const log = console.log.bind(console)
+
+const tap = f => x => { f(x); return x; }
+
 const printProduct = product =>
-  console.log(`${product.name}, ${product.sellIn}, ${product.price}`)
+  log(`${product.name}, ${product.sellIn}, ${product.price}`)
+
+const updatePrice = product =>
+  product.updatePrice()
 
 const productsAtDayZero = [
   new Product('Medium Coverage', 10, 20),
@@ -19,20 +26,14 @@ const productsAtDayZero = [
   new SuperSale(3, 6),
 ]
 
-const doUpdate = p => {
-  p.updatePrice()
-  return p
-}
-
 for (let i = 1; i <= 30; i += 1) {
-  console.log(`-------- day ${i} --------`)
-  console.log('name, sellIn, price')
+  log(`-------- day ${i} --------`)
+  log('name, sellIn, price')
 
   productsAtDayZero
-    .map(doUpdate)
+    .map(tap(updatePrice))
     .forEach(printProduct)
 
-  console.log('')
+  log('')
 }
-
 
