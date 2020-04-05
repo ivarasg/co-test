@@ -28,6 +28,6 @@
   },
   "homepage": "https://github.com/ivarasg/co-test#readme",
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^25.2.7"
   }
 }
